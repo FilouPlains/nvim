@@ -24,37 +24,19 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+-- Equivalent of <C-z>.
+vim.keymap.set("n", "<C-u>", ":u<CR>", {})
+
+-- Move line up or down.
+vim.keymap.set("n", "<A-j>", ":m +1<CR>", {})
+vim.keymap.set("n", "<A-k>", ":m -2<CR>", {})
+
+vim.keymap.set("n", "<C-A-w>", "<C-w><", {})
+
 -- Loading lazy.nvim.
-local plugins = {
-    -- Monokai color scheme.
-    { "tanvirtin/monokai.nvim", name = "monokai", priority = 1000 },
-    -- Telescope.
-    {"nvim-telescope/telescope.nvim", tag = "0.1.6", dependencies = { "nvim-lua/plenary.nvim" }},
-    -- Treesitter.
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
-}
 local opts = {}
 
 -- Plugin requirement.
 -- Lazy.
-require("lazy").setup(plugins, opts)
-
--- Monokai
-require("monokai").setup {}
-vim.cmd.colorscheme "monokai"
-
--- Telescope.
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<C-p>", builtin.find_files, {})
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-
--- Treesitter
-local config = require("nvim-treesitter.configs")
-config.setup({
-    ensure_installed = {"lua", "html", "css", "javascript", "python",
-                        "rust", "bash", "vim", "vimdoc", "latex",
-                        "markdown"},
-    highlight = { enable = true },
-    indent = { enable = true },
-})
+require("lazy").setup("plugins")
 
