@@ -1,3 +1,4 @@
+-- Neotree plugins add the tree files managers.
 return {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -7,7 +8,7 @@ return {
         "MunifTanjim/nui.nvim"
     },
     config = function()
-        vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>", {})
+        vim.keymap.set("n", "<C-n>", ":Neotree toggle<CR>", {})
     end
 }
 

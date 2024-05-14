@@ -18,6 +18,9 @@ vim.opt.rtp:prepend(lazypath)
 -- Loading lazy.nvim.
 local opts = {}
 
+-- Grep inside the project.
+vim.g.mapleader = " "
+
 -- Plugin requirement.
 -- Lazy.
 require("lazy").setup("plugins")
