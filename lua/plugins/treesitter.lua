@@ -9,6 +9,7 @@ return {
             ensure_installed = {"lua", "html", "css", "javascript", "python",
                                 "rust", "bash", "vim", "vimdoc", "latex",
                                 "markdown"},
+            auto_install = true,
             highlight = { enable = true },
             indent = { enable = true },
         })

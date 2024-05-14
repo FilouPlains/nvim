@@ -16,3 +16,20 @@ vim.keymap.set("n", "<C-A-Right>", "<C-w>>", {})
 
 -- Hide TMUX line/bar.
 vim.cmd("autocmd VimEnter,VimLeave * silent !tmux set status")
+
+-- 80 column marker.
+vim.cmd("set colorcolumn=80")
+vim.opt.textwidth = 80
+
+-- Adding numbers.
+vim.opt.nu = true
+vim.opt.relativenumber = true
+
+-- Modifying highlight while searching comportement.
+vim.opt.incsearch = true
+
+-- Terminal colors.
+vim.opt.termguicolors = true
+
+-- Update time.
+vim.opt.updatetime = 50
