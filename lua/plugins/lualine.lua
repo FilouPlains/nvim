@@ -25,7 +25,7 @@ return {
             cyan           = '#89DDFF',
             comment_grey   = '#697098',
             -- Modified so it match terminal background color.
-            black          = '#272822',
+            black          = '#262626',
         }
 
 		local palenight = {
