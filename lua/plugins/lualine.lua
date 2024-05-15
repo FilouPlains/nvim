@@ -7,7 +7,7 @@ return {
         -- Copyright (c) 2020-2021 IGI-111
         -- MIT license, see LICENSE for more details.
         -- stylua: ignore
-       local colors = {
+        local colors = {
             vertsplit      = '#181A1F',
             special_grey   = '#3B4048',
             menu_grey      = '#3E4452',
@@ -26,7 +26,7 @@ return {
             comment_grey   = '#697098',
             -- Modified so it match terminal background color.
             black          = '#272822',
-        } 
+        }
 
 		local palenight = {
 			normal = {
@@ -62,18 +62,18 @@ return {
 			},
 			sections = {
 				lualine_a = {
-                    { "mode", separator = { left = "" }, right_padding = 2 }
-                },
+					{ "mode", separator = { left = "" }, right_padding = 2 },
+				},
 				lualine_b = { "filename", "branch" },
 				lualine_c = {},
 				lualine_x = {},
 				lualine_y = { "filetype", "progress" },
 				lualine_z = {
-					{ 
-                        "location",
-                        separator = { right = "" },
-                        left_padding = 2
-                    },
+					{
+						"location",
+						separator = { right = "" },
+						left_padding = 2,
+					},
 				},
 			},
 			inactive_sections = {
