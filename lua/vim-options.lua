@@ -14,9 +14,6 @@ vim.keymap.set("n", "<A-k>", ":m -2<CR>", {})
 vim.keymap.set("n", "<C-A-Left>", "<C-w><", {})
 vim.keymap.set("n", "<C-A-Right>", "<C-w>>", {})
 
--- Hide TMUX line/bar.
-vim.cmd("autocmd VimEnter,VimLeave * silent !tmux set status")
-
 -- 80 column marker.
 vim.cmd("set colorcolumn=80")
 vim.opt.textwidth = 80
