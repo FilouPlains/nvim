@@ -33,10 +33,18 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+            -- Adding snippet based on LSP.
+            local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+            -- Global LSP configuration.
 			local lspconfig = require("lspconfig")
 
 			-- Automatically setup all LS.
 			for ls_i, parameter_i in pairs(installed_ls) do
+                -- LSP snippets.
+                parameter_i["capabilities"] = capabilities
+
+                -- Other configurations.
 				lspconfig[ls_i].setup(parameter_i)
 			end
 

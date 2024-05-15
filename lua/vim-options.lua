@@ -7,6 +7,9 @@ vim.cmd("set shiftwidth=4")
 -- Equivalent of <C-z>.
 vim.keymap.set("n", "<C-u>", ":u<CR>", {})
 
+-- In order to save files.
+vim.keymap.set("n", "<C-s>", ":w<CR>", {})
+
 -- Move line up or down.
 vim.keymap.set("n", "<A-j>", ":m +1<CR>", {})
 vim.keymap.set("n", "<A-k>", ":m -2<CR>", {})
