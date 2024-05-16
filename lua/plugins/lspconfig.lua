@@ -5,8 +5,13 @@ local installed_ls = {
 	["ltex"] = {},
 	["markdown_oxide"] = {},
 	["r_language_server"] = {},
-	["ruff"] = {
-		ling = { args = { "--line-length=80" } },
+	["ruff_lsp"] = {
+		init_options = {
+			settings = {
+				lint = { args = { "--line-length=80" } },
+				format = { args = { "--line-length=80" } },
+			},
+		},
 	},
 	["html"] = {},
 	["cssls"] = {},
@@ -25,26 +30,35 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
+			local lsp_list = {}
+			local i = 1
+
+			for ls_i, _ in pairs(installed_ls) do
+				lsp_list[i] = ls_i
+
+				i = i + 1
+			end
+
 			require("mason-lspconfig").setup({
-				ensure_installed = installed_ls,
+				ensure_installed = lsp_list,
 			})
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-            -- Adding snippet based on LSP.
-            local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			-- Adding snippet based on LSP.
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            -- Global LSP configuration.
+			-- Global LSP configuration.
 			local lspconfig = require("lspconfig")
 
 			-- Automatically setup all LS.
 			for ls_i, parameter_i in pairs(installed_ls) do
-                -- LSP snippets.
-                parameter_i["capabilities"] = capabilities
+				-- LSP snippets.
+				parameter_i["capabilities"] = capabilities
 
-                -- Other configurations.
+				-- Other configurations.
 				lspconfig[ls_i].setup(parameter_i)
 			end
 
