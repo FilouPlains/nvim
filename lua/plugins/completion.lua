@@ -1,3 +1,4 @@
+-- Plugins to have autocompletion in snippets.
 return {
     {
         "hrsh7th/cmp-nvim-lsp",

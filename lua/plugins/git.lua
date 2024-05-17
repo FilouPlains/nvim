@@ -1,3 +1,4 @@
+-- Add git features (add lines, commit author, etc.).
 return {
     "lewis6991/gitsigns.nvim",
     config = function()

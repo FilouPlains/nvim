@@ -1,3 +1,4 @@
+-- Enable multicursors mode in Neovim. Has some bugs…
 return {
 	"smoka7/multicursors.nvim",
 	event = "VeryLazy",
