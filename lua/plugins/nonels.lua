@@ -1,4 +1,20 @@
 -- None-LS, fork of Null-LS.
+-- List for files for "prettierd".
+local file_type = {
+    "css",
+    "graphql",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "less",
+    "markdown",
+    "scss",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+}
+
 return {
     {
         "nvimtools/none-ls.nvim",
@@ -12,7 +28,29 @@ return {
                 },
             })
 
-            vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {})
+            -- Function that format a file using "Prettier" if good extension
+            -- file detected or another one (bring with LSP or NoneLS).
+            local function format()
+                local view = vim.fn.winsaveview()
+
+                local launch_format = true
+
+                for _, type in pairs(file_type) do
+                    if type == vim.bo.filetype then
+                        launch_format = false
+                        vim.cmd("Prettier")
+                    end
+                end
+
+                if launch_format then
+                    vim.cmd("lua vim.lsp.buf.format()")
+                end
+
+                vim.fn.winrestview(view)
+            end
+
+            -- Command to format a file.
+            vim.keymap.set("n", "<leader>f", format, {})
         end,
     },
     {
@@ -23,20 +61,7 @@ return {
 
             prettier.setup({
                 bin = "prettierd",
-                filetypes = {
-                    "css",
-                    "graphql",
-                    "html",
-                    "javascript",
-                    "javascriptreact",
-                    "json",
-                    "less",
-                    "markdown",
-                    "scss",
-                    "typescript",
-                    "typescriptreact",
-                    "yaml",
-                },
+                filetypes = file_type,
                 cli_options = {
                     arrow_parens = "always",
                     bracket_spacing = true,
