@@ -5,14 +5,7 @@ local installed_ls = {
 	["ltex"] = {},
 	["markdown_oxide"] = {},
 	["r_language_server"] = {},
-	["ruff_lsp"] = {
-		init_options = {
-			settings = {
-				lint = { args = { "--line-length=80" } },
-				format = { args = { "--line-length=80" } },
-			},
-		},
-	},
+	["pyright"] = {},
 	["html"] = {},
 	["cssls"] = {},
 	["rust_analyzer"] = {},
@@ -66,6 +59,7 @@ return {
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "<leader>rf", vim.lsp.buf.rename, {})
 		end,
 	},
 }
