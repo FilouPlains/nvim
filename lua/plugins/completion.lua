@@ -43,7 +43,7 @@ return {
                 }),
             })
 
-            vim.keymap.set({"n", "i"}, "<C-i>", vim.lsp.buf.hover, {})
+            vim.keymap.set({"n", "i"}, "<A-i>", vim.lsp.buf.hover, {})
         end,
     },
 }
