@@ -42,6 +42,8 @@ return {
                     { name = "buffer" },
                 }),
             })
+
+            vim.keymap.set({"n", "i"}, "<C-i>", vim.lsp.buf.hover, {})
         end,
     },
 }
