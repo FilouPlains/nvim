@@ -1,3 +1,4 @@
+-- To add lines to enhance visualization.
 return {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
