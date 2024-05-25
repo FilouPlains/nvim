@@ -3,6 +3,14 @@ return {
 	"akinsho/bufferline.nvim",
 	dependencies = "nvim-tree/nvim-web-devicons",
 	config = function()
+		-- Keymapping.
+		for i = 1, 9 do
+			vim.keymap.set("n", "<leader>" .. i, ":BufferLineGoToBuffer" .. i .. "<CR>")
+		end
+
+		vim.keymap.set("n", "<C-PageUp>", ":BufferLineCycleNext<CR>")
+		vim.keymap.set("n", "<C-PageDown>", ":BufferLineCyclePrev<CR>")
+
 		require("bufferline").setup({
 			highlights = BUFFERLINE_COLORS,
 			options = {

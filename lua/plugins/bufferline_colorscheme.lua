@@ -62,7 +62,7 @@ BUFFERLINE_COLORS = {
 	duplicate_selected = { bg = selected_bg },
 	duplicate_visible = { bg = visible_bg },
 	duplicate = { bg = bg },
-	separator_selected = { fg = dark_bg },
+	separator_selected = { fg = dark_bg, bg = selected_bg },
 	separator_visible = { fg = dark_bg },
 	separator = { fg = dark_bg },
 	indicator_visible = { bg = visible_bg },
