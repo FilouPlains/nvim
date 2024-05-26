@@ -2,7 +2,7 @@
 return {
 	"danymat/neogen",
 	config = function()
-        vim.keymap.set("n", "<Leader>d", ":Neogen<CR>", {})
+        vim.keymap.set("n", "<leader>d", ":Neogen<CR>", {})
 
 		require("neogen").setup({
 			enabled = true,

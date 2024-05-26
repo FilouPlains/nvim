@@ -10,6 +10,7 @@ return {
 
 		vim.keymap.set("n", "<C-PageUp>", ":BufferLineCycleNext<CR>")
 		vim.keymap.set("n", "<C-PageDown>", ":BufferLineCyclePrev<CR>")
+		vim.keymap.set("n", "<C-w>", ":bdelete<CR>")
 
 		require("bufferline").setup({
 			highlights = BUFFERLINE_COLORS,
