@@ -16,9 +16,18 @@ git clone https://github.com/FilouPlains/nvim ~/.config/nvim
 
 ### Tabnine
 
-Run the following commands
+Run the following commands:
 
 ```bash
 cd ~/.local/share/nvim/lazy/tabnine-nvim
 ./dl_binaries.sh
 ```
+
+### Copy / Paste
+
+To copy paste in the system clipboard, use:
+
+```bash
+sudo apt install xsel
+```
+

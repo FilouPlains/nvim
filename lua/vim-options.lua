@@ -17,6 +17,9 @@ vim.keymap.set("n", "<A-k>", ":m -2<CR>", {})
 vim.keymap.set("n", "<C-A-Left>", "<C-w><", {})
 vim.keymap.set("n", "<C-A-Right>", "<C-w>>", {})
 
+-- Copy into the clipboard.
+vim.keymap.set("v", "Y", "\"+y", {})
+
 -- 80 column marker.
 vim.cmd("set colorcolumn=80")
 vim.opt.textwidth = 80
