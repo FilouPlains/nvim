@@ -32,7 +32,7 @@ return {
                     ["<C-k>"] = cmp.mapping.scroll_docs(-1),
                     ["<C-j>"] = cmp.mapping.scroll_docs(1),
                     ["<C-Space>"] = cmp.mapping.complete(),
-                    ["<C-e>"] = cmp.mapping.abort(),
+                    ["<Esc>"] = cmp.mapping.abort(),
                     ["<CR>"] = cmp.mapping.confirm({ select = true }),
                 }),
                 sources = cmp.config.sources({
