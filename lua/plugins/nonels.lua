@@ -24,10 +24,6 @@ return {
 	{
 		"nvimtools/none-ls.nvim",
 		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = format_list,
-			})
-
 			local null_ls = require("null-ls")
 			local null_format_list = {}
 
