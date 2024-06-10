@@ -25,7 +25,7 @@ cd ~/.local/share/nvim/lazy/tabnine-nvim
 
 ### Copy / Paste
 
-To copy paste in the system clipboard, use:
+To copy and paste in the system clipboard, use:
 
 ```bash
 sudo apt install xsel
