@@ -6,14 +6,19 @@ local installed_ls = {
 	["markdown_oxide"] = {},
 	["r_language_server"] = {},
 	["pyright"] = {},
-	["ruff_lsp"] = {
+	["ruff"] = {
 		on_attach = on_attach,
 		capabilities = capabilities,
 		filetypes = { "python" },
 		init_options = {
 			settings = {
 				lint = { args = { "--line-length=80" } },
-				format = { args = { "--line-length=80" } },
+				format = {
+					args = {
+						"--line-length=80",
+						"--config \"format.line-ending='lf'\"",
+					},
+				},
 			},
 		},
 	},
