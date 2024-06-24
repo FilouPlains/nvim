@@ -36,3 +36,6 @@ vim.opt.termguicolors = true
 
 -- Update time.
 vim.opt.updatetime = 50
+
+-- Show line break
+vim.cmd(":set list listchars=eol:󱞲")
