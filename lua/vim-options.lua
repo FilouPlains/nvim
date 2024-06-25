@@ -15,8 +15,11 @@ vim.keymap.set("n", "<C-s>", ":w<CR>", {})
 vim.keymap.set("n", "<A-j>", ":m +1<CR>", {})
 vim.keymap.set("n", "<A-k>", ":m -2<CR>", {})
 
+-- Resize pannels vertically and horizontally.
 vim.keymap.set("n", "<C-A-Left>", "<C-w><", {})
 vim.keymap.set("n", "<C-A-Right>", "<C-w>>", {})
+vim.keymap.set("n", "<C-A-Up>", "<C-w>+", {})
+vim.keymap.set("n", "<C-A-Down>", "<C-w>-", {})
 
 -- Copy into the clipboard.
 vim.keymap.set("v", "Y", '"+y', {})
