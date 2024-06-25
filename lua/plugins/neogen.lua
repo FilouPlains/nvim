@@ -2,9 +2,12 @@
 return {
     "danymat/neogen",
     config = function()
+        neogen = require("neogen")
+
+        -- Generate the docstrings.
         vim.keymap.set("n", "<leader>d", ":Neogen<CR>", {})
 
-        require("neogen").setup({
+        neogen.setup({
             enabled = true,
             snippet_engine = "luasnip",
             languages = {
