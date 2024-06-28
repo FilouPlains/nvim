@@ -10,6 +10,8 @@ vim.keymap.set("n", "<C-u>", ":u<CR>", {})
 
 -- In order to save files.
 vim.keymap.set("n", "<C-s>", ":w<CR>", {})
+vim.keymap.set("v", "<C-s>", "<Esc>:w<CR>", {})
+vim.keymap.set("i", "<C-s>", "<Esc>:w<CR><Right>i", {})
 
 -- Move line up or down.
 vim.keymap.set("n", "<A-j>", ":m +1<CR>", {})
