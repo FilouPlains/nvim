@@ -1,7 +1,15 @@
 -- Adding Language Servers (LS) features.
 -- Table of wantes LS.
 local installed_ls = {
-    ["lua_ls"] = {},
+    ["lua_ls"] = {
+        format = {
+            enable = true,
+            defaultConfig = {
+                indent_style = "space",
+                indent_size = "4",
+            },
+        },
+    },
     ["ltex"] = {},
     ["markdown_oxide"] = {},
     ["r_language_server"] = {},
