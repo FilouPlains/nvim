@@ -66,3 +66,6 @@ opt.guicursor = ""
 
 -- Disable line wrap.
 opt.wrap = false
+
+-- Retab a file in case of tabulation instead of spaces.
+map.set("n", "<Leader>r", ":retab<CR>", {})
