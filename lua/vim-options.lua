@@ -66,6 +66,8 @@ opt.guicursor = ""
 
 -- Disable line wrap.
 opt.wrap = false
+vim.o.wrap = false
+vim.o.textwidth = 0
 
 -- Retab a file in case of tabulation instead of spaces.
 map.set("n", "<Leader>r", ":retab<CR>", {})
