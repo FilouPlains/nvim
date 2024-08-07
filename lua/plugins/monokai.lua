@@ -1,4 +1,5 @@
 -- Monokai color scheme.
+
 return {
     "tanvirtin/monokai.nvim",
     name = "monokai",
@@ -6,8 +7,11 @@ return {
     config = function()
         local theme = require("monokai")
 
+        -- To access to the colour scheme.
+        COLOUR = require("monokai").classic
+
         theme.setup({
-            palette = require("monokai"),
+            palette = COLOUR,
         })
     end,
 }

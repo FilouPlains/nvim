@@ -1,6 +1,6 @@
 --- Gets the current buffer's path relative to the current working directory.
 ---
---- @return string - The relative path of the current buffer.
+--- @return string The relative path of the current buffer.
 local function get_path()
     local current_path = string.gsub(vim.api.nvim_buf_get_name(0), vim.loop.cwd(), "")
 
@@ -12,8 +12,8 @@ end
 --- Constructs the appropriate Python command to run a script.
 ---
 --- @param path string The path of the Python script.
---- @return string|nil - The command to run the Python script, or nil if the
----                      input was invalid.
+--- @return string|nil The command to run the Python script, or nil if the
+---                    input was invalid.
 local function python_command(path)
     local do_module = vim.fn.input("Is this a module [y/n]? ", "y")
 
@@ -31,7 +31,7 @@ end
 --- Constructs the appropriate Bash command to run a script.
 ---
 --- @param path string The path of the Bash script.
---- @return string|nil - The command to run the bash script.
+--- @return string|nil The command to run the bash script.
 local function bash_command(path)
     return "bash " .. path
 end
@@ -40,8 +40,8 @@ end
 --- Currently supports only Python scripts.
 ---
 --- @param path string The path of the script.
---- @return string|nil - The command to launch the script, or nil if the
----                      extension is not supported.
+--- @return string|nil The command to launch the script, or nil if the
+---                    extension is not supported.
 local function launch_script(path)
     local extension = string.match(path, "%..+$")
 

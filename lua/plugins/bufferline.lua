@@ -13,7 +13,7 @@ return {
         vim.keymap.set("n", "<A-w>", ":bdelete<CR>")
 
         require("bufferline").setup({
-            highlights = BUFFERLINE_COLORS,
+            highlights = require("bufferline_colorscheme"),
             options = {
                 diagnostics = "nvim_lsp",
                 offsets = {

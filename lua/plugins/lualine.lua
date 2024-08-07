@@ -8,24 +8,24 @@ return {
         -- MIT license, see LICENSE for more details.
         -- stylua: ignore
         local colors = {
-            vertsplit      = "#181A1F",
-            special_grey   = "#3B4048",
-            menu_grey      = "#3E4452",
-            cursor_grey    = "#2C323C",
-            gutter_fg_grey = "#4B5263",
-            blue           = "#82b1ff",
-            dark_red       = "#BE5046",
-            white          = "#bfc7d5",
-            green          = "#C3E88D",
-            purple         = "#c792ea",
-            yellow         = "#ffcb6b",
-            light_red      = "#ff869a",
-            red            = "#ff5370",
+            vertsplit      = COLOUR.black,
+            special_grey   = COLOUR.base4,
+            menu_grey      = COLOUR.base4,
+            cursor_grey    = COLOUR.base3,
+            gutter_fg_grey = COLOUR.base4,
+            blue           = COLOUR.orange,
+            white          = COLOUR.white,
+            green          = COLOUR.green,
+            purple         = COLOUR.purple,
+            yellow         = COLOUR.yellow,
             dark_yellow    = "#F78C6C",
-            cyan           = "#89DDFF",
+            light_red      = "#ff869a",
+            red            = COLOUR.red,
+            dark_red       = "#BE5046",
+            cyan           = COLOUR.aqua,
             comment_grey   = "#697098",
             -- Modified so it match terminal background color.
-            black          = "#262626",
+            black          = COLOUR.base0,
         }
 
         local palenight = {
@@ -53,8 +53,10 @@ return {
             },
         }
 
+        TOTO = require("lualine")
+
         -- Setting the theme.
-        require("lualine").setup({
+        TOTO.setup({
             options = {
                 theme = palenight,
                 component_separators = "",

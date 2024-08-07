@@ -1,19 +1,19 @@
 -- Setting up colors schemes for bufferline.lua.
 
 -- Background colors.
-local selected_bg = "#262626"
+local selected_bg = COLOUR.base0
 local dark_bg = "#1F1F1F"
 local bg = dark_bg
-local visible_bg = "#262626"
+local visible_bg = COLOUR.base0
 
 -- Foreground colors.
-local hint = "#5FD7FF"
-local info = hint
-local warning = "#D7D787"
-local error_col = "#D75F87"
+local hint = COLOUR.aqua
+local info = COLOUR.aqua
+local warning = COLOUR.yellow
+local error_col = COLOUR.red
 
 -- Colors definition.
-BUFFERLINE_COLORS = {
+local bufferline_colors = {
     fill = { bg = dark_bg },
     background = { bg = bg },
     tab = { bg = bg },
@@ -74,5 +74,4 @@ BUFFERLINE_COLORS = {
     trunc_marker = { bg = bg },
 }
 
--- So Neovim says nothing.
-return {}
+return bufferline_colors
