@@ -25,7 +25,7 @@ return {
             cyan           = COLOUR.aqua,
             comment_grey   = "#697098",
             -- Modified so it match terminal background color.
-            black          = COLOUR.base0,
+            black          = COLOUR.base2,
         }
 
         local palenight = {

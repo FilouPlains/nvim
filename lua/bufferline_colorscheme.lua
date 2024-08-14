@@ -1,10 +1,10 @@
 -- Setting up colors schemes for bufferline.lua.
 
 -- Background colors.
-local selected_bg = COLOUR.base0
+local selected_bg = COLOUR.base2
 local dark_bg = "#1F1F1F"
 local bg = dark_bg
-local visible_bg = COLOUR.base0
+local visible_bg = COLOUR.base2
 
 -- Foreground colors.
 local hint = COLOUR.aqua
