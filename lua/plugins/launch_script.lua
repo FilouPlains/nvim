@@ -36,6 +36,17 @@ local function bash_command(path)
     return "bash " .. path
 end
 
+--- Constructs the appropriate HTML / CSS command to live edit.
+---
+--- @param path string The path of the HTML / CSS script.
+--- @return string|nil The command to run the bash script.
+local function html_css_command(path)
+    local command = 'browser-sync start --server --directory --files "*"' ..
+        " --startPath \""
+
+    return command .. path .. "\""
+end
+
 --- Launches a script based on its file extension.
 --- Currently supports only Python scripts.
 ---
@@ -49,6 +60,8 @@ local function launch_script(path)
         return python_command(path)
     elseif extension == ".sh" then
         return bash_command(path)
+    elseif extension == ".html" or extension == ".css" then
+        return html_css_command(path)
     else
         return nil
     end
@@ -61,7 +74,7 @@ vim.api.nvim_create_user_command("LaunchScript", function()
     if command == nil then
         print("No defined routine to execute a script with this file extension.")
     else
-        command = vim.fn.input(":", "!" .. command)
+        command = vim.fn.input(":", "terminal " .. command)
 
         vim.cmd("redraw")
         vim.cmd(command)
