@@ -29,6 +29,7 @@ local installed_ls = {
     ["cssls"] = {},
     ["rust_analyzer"] = {},
     ["bashls"] = {},
+    ["emmet_language_server"] = {},
 }
 
 -- Setting things up.
