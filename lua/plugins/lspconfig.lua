@@ -10,7 +10,6 @@ local installed_ls = {
             },
         },
     },
-    ["ltex"] = {},
     ["markdown_oxide"] = {},
     ["r_language_server"] = {},
     ["pyright"] = {},
