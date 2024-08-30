@@ -53,10 +53,10 @@ return {
             },
         }
 
-        TOTO = require("lualine")
+        local lualine_theme = require("lualine")
 
         -- Setting the theme.
-        TOTO.setup({
+        lualine_theme.setup({
             options = {
                 theme = palenight,
                 component_separators = "",
