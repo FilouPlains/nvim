@@ -76,6 +76,7 @@ vim.api.nvim_create_user_command("LaunchScript", function()
     else
         command = vim.fn.input(":", "terminal " .. command)
 
+        vim.cmd("w")
         vim.cmd("redraw")
         vim.cmd(command)
     end
