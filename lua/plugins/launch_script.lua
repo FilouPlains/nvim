@@ -84,5 +84,7 @@ end, {})
 
 -- A keymap to launch the current script.
 vim.keymap.set("n", "<C-A-b>", ":LaunchScript<CR>")
+vim.keymap.set("v", "<C-A-b>", "<Esc>:LaunchScript<CR>")
+vim.keymap.set("i", "<C-A-b>", "<Esc>:LaunchScript<CR>")
 
 return {}

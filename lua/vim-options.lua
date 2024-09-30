@@ -15,7 +15,7 @@ map.set("n", "<C-u>", ":u<CR>", {})
 -- In order to save files.
 map.set("n", "<C-s>", ":w<CR>", {})
 map.set("v", "<C-s>", "<Esc>:w<CR>", {})
-map.set("i", "<C-s>", "<Esc>:w<CR><Right>i", {})
+map.set("i", "<C-s>", "<Esc>:w<CR>i<Right>", {})
 
 -- Move line up or down.
 map.set("n", "<A-j>", ":m +1<CR>", {})
