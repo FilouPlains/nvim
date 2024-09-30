@@ -23,13 +23,12 @@ vim.g.mapleader = " "
 -- Lazy.
 local lazy = require("lazy")
 
-lazy.setup("plugins")
+-- lazy.setup("plugins")
 -- Disable automatic updates checking…
-lazy.setup({
+lazy.setup("plugins", {
     checker = { enabled = false },
     update = { enabled = false },
 })
 
 -- VIM options.
 require("vim-options")
-
