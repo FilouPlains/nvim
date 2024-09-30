@@ -25,7 +25,11 @@ local lazy = require("lazy")
 
 lazy.setup("plugins")
 -- Disable automatic updates checking…
-lazy.setup({checker = { enabled = false }})
+lazy.setup({
+    checker = { enabled = false },
+    update = { enabled = false },
+})
 
 -- VIM options.
 require("vim-options")
+
