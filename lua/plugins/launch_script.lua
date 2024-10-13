@@ -31,7 +31,7 @@ end
 --- Constructs the appropriate Bash command to run a script.
 ---
 --- @param path string The path of the Bash script.
---- @return string|nil The command to run the bash script.
+--- @return string The command to run the bash script.
 local function bash_command(path)
     return "bash " .. path
 end
@@ -39,12 +39,19 @@ end
 --- Constructs the appropriate HTML / CSS command to live edit.
 ---
 --- @param path string The path of the HTML / CSS script.
---- @return string|nil The command to run the bash script.
+--- @return string The command to run the bash script.
 local function html_css_command(path)
     local command = 'browser-sync start --server --directory --files "*"' ..
         " --startPath \""
 
     return command .. path .. "\""
+end
+
+--- Launch radian terminal for r.
+---
+--- @return string The command to run radian terminal.
+local function r_command()
+    return "radian"
 end
 
 --- Launches a script based on its file extension.
@@ -62,6 +69,8 @@ local function launch_script(path)
         return bash_command(path)
     elseif extension == ".html" or extension == ".css" then
         return html_css_command(path)
+    elseif extension == ".r" then
+        return r_command()
     else
         return nil
     end
