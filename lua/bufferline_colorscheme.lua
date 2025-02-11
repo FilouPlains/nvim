@@ -1,16 +1,20 @@
 -- Setting up colors schemes for bufferline.lua.
 
+local colour = require("nord.colors")
+
 -- Background colors.
-local selected_bg = COLOUR.base2
-local dark_bg = "#1F1F1F"
-local bg = dark_bg
-local visible_bg = COLOUR.base2
+local selected_bg = colour.nord0_gui
+-- Darker nord0_gui colour.
+local dark_bg = "#1E2330"
+-- Darker nord0_gui colour.
+local bg = "#1E2330"
+local visible_bg = colour.nord0_gui
 
 -- Foreground colors.
-local hint = COLOUR.aqua
-local info = COLOUR.aqua
-local warning = COLOUR.yellow
-local error_col = COLOUR.red
+local hint = colour.nord8_gui
+local info = colour.nord8_gui
+local warning = colour.nord13_gui
+local error_col = colour.nord11_gui
 
 -- Colors definition.
 local bufferline_colors = {
@@ -62,9 +66,12 @@ local bufferline_colors = {
     duplicate_selected = { bg = selected_bg },
     duplicate_visible = { bg = visible_bg },
     duplicate = { bg = bg },
+    -- separator_selected = { fg = dark_bg, bg = selected_bg },
+    -- separator_visible = { fg = dark_bg },
+    -- separator = { fg = dark_bg },
     separator_selected = { fg = dark_bg, bg = selected_bg },
-    separator_visible = { fg = dark_bg },
-    separator = { fg = dark_bg },
+    separator_visible = { fg = dark_bg, bg = selected_bg },
+    separator = { fg = dark_bg, bg = dark_bg },
     indicator_visible = { bg = visible_bg },
     indicator_selected = { bg = selected_bg },
     pick_selected = { bg = selected_bg },

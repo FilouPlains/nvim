@@ -1,6 +1,7 @@
 -- Monokai color scheme.
 
 return {
+    enabled = false,
     "tanvirtin/monokai.nvim",
     name = "monokai",
     priority = 1000,
